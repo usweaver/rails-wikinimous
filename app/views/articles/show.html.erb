@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center gap-5">
+  <h1 class="flex-grow-1"><%= @article.title %></h1>
+  <%= link_to edit_article_path(@article) do%>
+    <i class="fa-solid fa-pen-to-square h2"></i>
+  <% end %>
+  <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-trash-can h2"></i>
+  <% end %>
+</div>
+<hr>
+<p><%= @article.content %></p>
+<%= link_to articles_path do %>
+    <div class="btn btn-primary btn-sm mb-3"><i class="fa-solid fa-list"></i> Back to articles</div>
+<% end %>

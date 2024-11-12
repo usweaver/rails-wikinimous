@@ -1,0 +1,11 @@
+<%= form_with model: article do |f| %>
+  <div class="form-floating mb-3">
+    <%= f.text_field(:title, class: "form-control", placeholder: "Title") %>
+    <%= f.label :title %>
+  </div>
+  <div class="form-floating mb-3">
+    <%= f.text_area(:content, class: "form-control h-100", placeholder: "Content") %>
+    <%= f.label :content %>
+  </div>
+  <%= f.submit class: ["btn", "btn-secondary", "btn-sm"]%>
+<% end %>

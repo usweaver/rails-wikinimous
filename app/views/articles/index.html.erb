@@ -1,0 +1,6 @@
+<% @articles.each do |article| %>
+  <div>
+  <%= link_to article.title, article_path(article), class: "fs-3"%>
+  <p class="fs-5"><%= article.content.truncate(80) %></p>
+  </div>
+<% end %>
